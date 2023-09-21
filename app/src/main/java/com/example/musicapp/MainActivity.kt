@@ -11,23 +11,23 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var play: ImageButton = findViewById(R.id.btnPlayPause)
+        val play: ImageButton = findViewById(R.id.btnPlayPause)
         var playing:Boolean = true
         play.setOnClickListener {
-            if(playing){
+            playing = if(playing){
                 play.setImageResource(android.R.drawable.ic_media_pause)
-                playing = false
+                false
             } else {
                 play.setImageResource(android.R.drawable.ic_media_play)
-                playing = true
+                true
             }
         }
 
         findViewById<ImageView>(R.id.imgMute).setOnClickListener {
-            findViewById<SeekBar>(R.id.barVolume).setProgress(0)
+            findViewById<SeekBar>(R.id.barVolume).progress = 0
         }
         findViewById<ImageView>(R.id.imgMaxVol).setOnClickListener {
-            findViewById<SeekBar>(R.id.barVolume).setProgress(100)
+            findViewById<SeekBar>(R.id.barVolume).progress = 100
         }
     }
 }
