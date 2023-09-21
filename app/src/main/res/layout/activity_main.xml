@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/imgCancion"
-        android:layout_width="301dp"
-        android:layout_height="309dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         app:layout_constraintBottom_toTopOf="@+id/txtCancion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
