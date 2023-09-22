@@ -2,9 +2,11 @@ package com.example.musicapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.SeekBar
+import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,8 +28,8 @@ class MainActivity : AppCompatActivity() {
         findViewById<ImageView>(R.id.imgMute).setOnClickListener {
             findViewById<SeekBar>(R.id.barVolume).progress = 0
         }
-        findViewById<ImageView>(R.id.imgMaxVol).setOnClickListener {
-            findViewById<SeekBar>(R.id.barVolume).progress = 100
+        findViewById<ImageView>(R.id.imgMute).setOnClickListener {
+            findViewById<SeekBar>(R.id.imgMaxVol).progress = 100
         }
     }
 }
